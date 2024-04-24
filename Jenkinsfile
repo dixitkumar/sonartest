@@ -4,7 +4,8 @@ def splitModules(String moduleName) {
       submodules.parcels.moduleName.each { module ->
         value = value + module + ','
     }
-      return value.replaceAll(''',$''', '''''')
+    return value
+     // return value.replaceAll(''',$''', '''''')
 }
 
 pipeline {
