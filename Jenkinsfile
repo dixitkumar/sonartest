@@ -16,7 +16,7 @@ pipeline {
                 script {
                 def accounting = splitModules('accounting')
                 
-               echo '${accounting}'
+               echo "${accounting}"
                 }
             }
         }
