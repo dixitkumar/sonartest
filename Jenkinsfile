@@ -1,6 +1,6 @@
 def splitModules(String moduleName) {
       String value = ''
-      Map submodules = readYaml file: '../../../modules.yml'
+      Map submodules = readYaml file: 'modules.yml'
       submodules.parcels.moduleName.each { module ->
         value = value + module + ','
     }
