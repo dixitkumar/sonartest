@@ -2,9 +2,11 @@ def splitModules(String moduleName) {
       String value = ''
       Map submodules = readYaml file: 'modules.yml'
       submodules.parcels.moduleName.each { module ->
+      	echo 'Hello'
       	echo module
       	echo "${module}"
         value = value + module + ','
+        echo 'Hello'
     }
     return value
      // return value.replaceAll(''',$''', '''''')
