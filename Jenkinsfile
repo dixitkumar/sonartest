@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                 String accounting = splitModules('accounting')
-                cho "${accounting}"
+                echo "${accounting}"
                 }
             }
         }
