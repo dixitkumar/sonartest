@@ -4,8 +4,7 @@ def splitModules(String moduleName) {
       submodules.parcels."${moduleName}".each { module ->
         value = value + module + ','
     }
-    return value
-     // return value.replaceAll(''',$''', '''''')
+      return value.replaceAll(''',$''', '''''')
 }
 
 pipeline {
@@ -15,8 +14,7 @@ pipeline {
             steps {
                 script {
                 String accounting = splitModules('accounting')
-                
-               echo "${accounting}"
+                cho "${accounting}"
                 }
             }
         }
