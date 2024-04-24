@@ -13,7 +13,7 @@ pipeline {
         stage('Stage 1') {
             steps {
                 script {
-                String accounting = splitModules('accounting')
+                def accounting = splitModules('accounting')
                 echo "${accounting}"
                 }
             }
