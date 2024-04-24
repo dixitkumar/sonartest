@@ -1,7 +1,7 @@
 def splitModules(String moduleName) {
       String value = ''
       Map submodules = readYaml file: 'modules.yml'
-      println 'Loaded configuration values: \n\n' + JsonOutput.prettyPrint(JsonOutput.toJson(submodules))
+      echo "${submodules}"
       "submodules.parcels.${moduleName}.each" { module ->
       	echo 'Hello'
       	echo module
