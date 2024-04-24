@@ -1,10 +1,7 @@
 def splitModules(String moduleName) {
       String value = ''
       Map submodules = readYaml file: 'modules.yml'
-      echo "${submodules}"
-      "submodules.parcels.${moduleName}.each" { module ->
-      	echo 'Hello'
-      	echo module
+      submodules.parcels."${moduleName}".each { module ->
       	echo "${module}"
         value = value + module + ','
         echo 'Hello'
