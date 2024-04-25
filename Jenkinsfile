@@ -17,7 +17,7 @@ pipeline {
                 //bat "echo ${accounting}"
                       Map submodules = readYaml file: 'modules.yml'
                       submodules.parcels.each { submodule ->
-                      echo submodule
+                      "echo ${submodule}"
                 	  def moduleNames = splitModules(submodule)
                 	bat "echo ${moduleNames}"
                 }
