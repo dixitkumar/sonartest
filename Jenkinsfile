@@ -20,7 +20,7 @@ pipeline {
                       echo submodule
                 	  def moduleNames = splitModules(submodule)
                 	bat "echo ${moduleNames}"
-                
+                }
                 }
             }
         }
