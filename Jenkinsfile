@@ -13,12 +13,12 @@ pipeline {
         stage('Stage 1') {
             steps {
                 script {
-                //def accounting = splitModules('accounting')
-                //bat "echo ${accounting}"
                       Map submodules = readYaml file: 'modules.yml'
                       submodules.parcels.each { submodule ->
                       def moduleNames = splitModules(submodule.key)
-                	bat "echo ${moduleNames}"
+                      stage(submodule.key){
+                                      	bat "echo ${moduleNames}"
+                      }
                 }
                 }
             }
