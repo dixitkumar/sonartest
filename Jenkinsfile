@@ -15,7 +15,7 @@ def generateReport(String reportName) {
   reportFiles: '**/*',
   reportName: " ${ reportName }"
   ]
-      archiveArtifacts artifacts: "test/${ reportName }", fingerprint: true
+      archiveArtifacts artifacts: "**/*", fingerprint: true
 }
 
 pipeline {
