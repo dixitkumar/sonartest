@@ -6,6 +6,16 @@ def splitModules(String moduleName) {
     }
       return value.replaceAll(''',$''', '''''')
 }
+def generateReport(String reportName) {
+  publishHTML target: [
+  allowMissing: false,
+  alwaysLinkToLastBuild: false,
+  keepAll: true,
+  reportDir: 'scan reports',
+  reportFiles: '**/*',
+  reportName: ${ reportName }
+  ]
+}
 
 pipeline {
     agent any
@@ -18,6 +28,8 @@ pipeline {
                       def moduleNames = splitModules(submodule.key)
                       stage(submodule.key){
                                       	bat "echo ${moduleNames}"
+                                                generateReport(submodule.key)
+
                       }
                 }
                 }
