@@ -30,7 +30,7 @@ pipeline {
                       stage(submodule.key){
                                       	bat "echo ${moduleNames}"
                                                 generateReport(submodule.key)
-  archiveArtifacts artifacts: "submodule.key", fingerprint: true
+  archiveArtifacts artifacts: "${submodule.key}", fingerprint: true
                       }
                 }
                 }
