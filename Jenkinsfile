@@ -11,7 +11,7 @@ def generateReport(String reportName) {
   allowMissing: false,
   alwaysLinkToLastBuild: false,
   keepAll: true,
-  reportDir: 'scan reports',
+  reportDir: 'test',
   reportFiles: '**/*',
   reportName: 'scanreport'
   ]
