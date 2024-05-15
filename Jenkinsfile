@@ -15,7 +15,7 @@ def generateReport(String reportName) {
   reportFiles: '**/*',
   reportName: " ${ reportName }"
   ]
-      archiveArtifacts artifacts: "**/*", fingerprint: true
+    
 }
 
 pipeline {
@@ -30,7 +30,7 @@ pipeline {
                       stage(submodule.key){
                                       	bat "echo ${moduleNames}"
                                                 generateReport(submodule.key)
-
+  archiveArtifacts artifacts: "submodule.key", fingerprint: true
                       }
                 }
                 }
