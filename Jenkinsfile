@@ -31,7 +31,7 @@ pipeline {
                                       	bat "echo ${moduleNames}"
                                                 generateReport(submodule.key)
 dir('test') {
-		    			archiveArtifacts artifacts: "**.*", fingerprint: true   
+		    			archiveArtifacts artifacts: "${submodule.key}", fingerprint: true   
 		    		}
                           
                       }
