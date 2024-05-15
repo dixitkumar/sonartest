@@ -13,7 +13,7 @@ def generateReport(String reportName) {
   keepAll: true,
   reportDir: 'test',
   reportFiles: '**/*',
-  reportName: 'scanreport'
+  reportName: ' ${ reportName }'
   ]
 }
 
