@@ -22,7 +22,7 @@ pipeline {
     agent any
 parameters {
         choice(name: 'autotest', choices: ['cede-autotest', 'fcr-autotest'], description: 'Pick something')
-	choice(name: 'dbPlatform', choices: ['mysql', 'sqlserver, 'postg', 'oracle'], description: 'Pick something')
+	
     }
     stages {
         stage('Stage 1') {
