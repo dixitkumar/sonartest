@@ -20,6 +20,11 @@ def generateReport(String reportName) {
 
 pipeline {
     agent any
+parameters {
+        choice(name: 'autotest', choices: ['cede-autotest', 'fcr-autotest'], description: 'Pick something')
+	choice(name: 'dbPlatform', choices: ['mysql', 'sqlserver, 'postgresql', 'oracle'], description: 'Pick something')
+        booleanParam(name: 'do_import_databases', defaultValue: false, description: 'Import Databases')
+    }
     stages {
         stage('Stage 1') {
             steps {
