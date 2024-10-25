@@ -30,9 +30,9 @@ parameters {
 		    steps{
 			    script{
 				    echo "Hello"
-				    def userex= "AT_UPR_SOURCE"
-				    
-			    	    echo ${userex}
+				  def username = 'Jenkins'
+echo 'Hello Mr. ${username}'
+echo "I said, Hello Mr. ${username}"
 				    echo "bye"
 			    }
 		    
