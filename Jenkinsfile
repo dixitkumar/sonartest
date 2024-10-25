@@ -30,9 +30,9 @@ parameters {
 		    steps{
 			    script{
 				    echo "Hello"
-				String userex= 'AT_UPR_SOURCE'
+				    String userex= "AT_UPR_SOURCE"
 				    String userex1= userex.replace("SOURCE","TEST")
-			    echo ${userex1}
+			    	    echo ${userex1}
 				    echo "bye"
 			    }
 		    
