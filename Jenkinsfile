@@ -30,9 +30,10 @@ parameters {
 		    steps{
 			    script{
 				    echo "Hello"
-				  def username = 'Jenkins'
-echo 'Hello Mr. ${username}'
-echo "I said, Hello Mr. ${username}"
+				  def username = 'Jenkins_SOURCE'
+				    def test = "${username}".replace("SOURCE","TEST")
+
+echo "I said, Hello Mr. ${test}"
 				    echo "bye"
 			    }
 		    
