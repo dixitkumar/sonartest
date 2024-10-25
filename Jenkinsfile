@@ -33,7 +33,7 @@ parameters {
 				def userex= 'AT_UPR_SOURCE'
 				    def userex1= userex.replace("SOURCE","TEST")
 			    echo ${userex1}
-				    echo "Hello"
+				    echo "bye"
 			    }
 		    
 		    }
