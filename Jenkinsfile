@@ -29,8 +29,9 @@ parameters {
 	    stage("test"){
 		    steps{
 			    script{
-def userex= AT_UPR_SOURCE
-			    echo "userex.replace("SOURCE","TEST")"
+				def userex= 'AT_UPR_SOURCE'
+				    def userex1= userex.replace("SOURCE","TEST")
+			    echo ${userex1}
 			    }
 		    
 		    }
