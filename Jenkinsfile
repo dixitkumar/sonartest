@@ -64,13 +64,8 @@ dir('test') {
 		script{
 			 echo 'I will always say Hello again!'
             	 
-                        	def props = new Properties()
-							def file = new File('./build.properties')
-							file.withInputStream { stream ->
-							    props.load(stream)
-							}
-							sicsBuildNo = props.getProperty('build')
-							println "SicsBuildNo: $sicsBuildNo"
+                        	def props = readProperties file: './build.properties'
+				echo "Environment: ${props.build}"
                   
         }
     }
