@@ -62,7 +62,7 @@ dir('test') {
 	    post { 
         always { 
             echo 'I will always say Hello again!'
-            	 if (sh(script: 'find -path "./build.properties" | egrep . > /dev/null', returnStatus: true) == 0) {
+            	 
                         	def props = new Properties()
 							def file = new File('./build.properties')
 							file.withInputStream { stream ->
@@ -70,7 +70,7 @@ dir('test') {
 							}
 							sicsBuildNo = props.getProperty('build')
 							println "SicsBuildNo: $sicsBuildNo"
-                    }
+                  
         }
     }
 }
