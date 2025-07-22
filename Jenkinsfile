@@ -61,7 +61,8 @@ dir('test') {
     }
 	    post { 
         always { 
-            echo 'I will always say Hello again!'
+		script{
+			 echo 'I will always say Hello again!'
             	 
                         	def props = new Properties()
 							def file = new File('./build.properties')
@@ -73,4 +74,6 @@ dir('test') {
                   
         }
     }
+		}
+           
 }
